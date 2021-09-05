@@ -6,4 +6,7 @@ each node from 1 to 40. A random number, say 'n' is then selected, and the list 
 This happens for 6 times. Each time the list is traversed, it returns the value of that node to see 
 if the value of the node matches the user's number.
 
+**HEADER FILES INCLUDED**
+-ctype.h : contains inbuilt functions to handle characters in C. For eg. isalpha(), isalnum(), isblank(), etc
+
 
