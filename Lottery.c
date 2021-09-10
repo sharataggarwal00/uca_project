@@ -6,22 +6,22 @@
 
 struct Lottery
 {
-    int value;
-    struct Lottery *previous;
-    struct Lottery *next;
+    int value;						// To store the value of node
+    struct Lottery *previous;				// Pointer to previous node
+    struct Lottery *next;				// Pointer to next node
 };
 
 // Function to check whether or not the value entered is valid
 // input: value in form of character
 // output: if check is passed, it returns 1, else 0
-int int_check(char check[])
+int int_check (char check[])
 {
     int length, i, num, count = 0;
     int flag;
 
-    length = strlen (check);				// Assigns the string length to x
+    length = strlen (check);				// Assigns the string length to length
 
-    for (i=0 ; i<length ; i++)				// To check if every character is a digit
+    for (i = 0 ; i < length ; i++)			// To check if every character is a digit
     {
 	if (! (check[i] >= 48 && check[i] <= 57))	// Checking with ASCII values of digits 0-9
         {
@@ -67,10 +67,10 @@ struct Lottery *get_list()
     struct Lottery *head, *current, *temp;
 
     head = malloc (sizeof (struct Lottery));			// A node is created at the 'head'
-    current = head;						// 'head' is assigned to 'current'
-    temp = head;						// 'head' is assigned to 'temp'
+    current = head;						// current points to head
+    temp = head;						// temp points to head
 
-    for (i=1 ; i<=40 ; i++)					// creating the rest of the nodes
+    for (i = 1 ; i <= 40 ; i++)					// creating the rest of the nodes
     {
 	current->value = i;
 	current->next = malloc (sizeof (struct Lottery));
@@ -152,7 +152,7 @@ int main()
     struct Lottery *start;
     int num1, num2, num3, num4, num5, num6;		// variables for user entered values
     char check[10];					//temporary character array to check if it is valid
-    int x, i, count_right = 0, int_array[6];
+    int drawn_num, i, count_right = 0, int_array[6];
 
     start = get_list();					// head returned by get_list assigned to start
 
@@ -322,12 +322,12 @@ int main()
     {
 	start = traverse (start);							// The node returned by traverse() is assigned to start
 
-	x = return_value (start);							// storing the value of the node returned by traverse()
+	drawn_num = return_value (start);							// storing the value of the node returned by traverse()
 
-	int_array[i] = x;								
+	int_array[i] = drawn_num;								
 
 	// If the value of the selected node is equal to the value entered, then 1 is added to count_right
-	if (x == num1 || x == num2 || x == num3 || x == num4 || x == num5 || x == num6)
+	if (drawn_num == num1 || drawn_num == num2 || drawn_num == num3 || drawn_num == num4 || drawn_num == num5 || drawn_num == num6)
 	{
 	    count_right++;
 	}
@@ -340,25 +340,25 @@ int main()
 
     // To determine how many numbers were matched.
 
-    if(count_right==6)
-	printf("\n\n'CONGRATULATIONS! You matched all 6 numbers. You've won $100 million.'");		
+    if(count_right == 6)
+	printf("\n\n'CONGRATULATIONS! You matched all 6 numbers. You've won Rs 2000.'");		
     
-    if(count_right==5)
-	printf("\n\n'You matched 5 numbers. You missed the jackpot by one. You've won $100,000.'");
+    if(count_right == 5)
+	printf("\n\n'You matched 5 numbers. You missed the jackpot by one. You've won Rs 1200.'");
     
-    if(count_right==4)
-	printf("\n\n'You matched 4 numbers. You've won $20,000.'");
+    if(count_right == 4)
+	printf("\n\n'You matched 4 numbers. You've won Rs 600.'");
     
-    if(count_right==3)
-	printf("\n\n'You matched 3 numbers. You've won $250.'");
+    if(count_right == 3)
+	printf("\n\n'You matched 3 numbers. You've won Rs 300.'");
     
-    if(count_right==2)
-	printf("\n\n'You matched 2 numbers. You've won $15.'");
+    if(count_right == 2)
+	printf("\n\n'You matched 2 numbers. You've won Rs 150.'");
     
-    if(count_right==1)
+    if(count_right == 1)
 	printf("\n\n'You only matched 1 number. You get your money back.'");
     
-    if(count_right==0)
+    if(count_right == 0)
 	printf("\n\n'You matched 0 numbers.' ---Better luck next time---");
 
     return 0;
