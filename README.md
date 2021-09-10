@@ -13,10 +13,10 @@ The rules of the game are as follows :-
 >Then the drawn set of numbers is compared to the user entered numbers and the number of matches occured are counted and prize dislpayed accordingly.
 
 ### SPECIAL FEATURES
--For selecting numbers randomly, **rand() function**.
--But for each run, it produces the **same result**, because it uses a mathematical algorithm that calculates these numbers based on a *starting value called **'seed'***.
--So, the program uses **srand(time(NULL))** function makes use of the computer's internal clock to control the choice of the seed. Since time is continually changing, the seed is forever changing.
--Therefore, for each run, **time() function provides a new seed** and thus, each times we get different result, *making the game fair*.
+- For selecting numbers randomly, **rand() function**.
+- But for each run, it produces the **same result**, because it uses a mathematical algorithm that calculates these numbers based on a *starting value called **'seed'***.
+- So, the program uses **srand(time(NULL))** function makes use of the computer's internal clock to control the choice of the seed. Since time is continually changing, the seed is forever changing.
+- Therefore, for each run, **time() function provides a new seed** and thus, each times we get different result, *making the game fair*.
 
 ### GOALS
 - The goal is to prepare a simple program to implement the concepts learned during the course
