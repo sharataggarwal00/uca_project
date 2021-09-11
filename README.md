@@ -1,6 +1,6 @@
 # L-O-T-T-E-R-Y - The Game
 
-Ramesh is a college student persuing computer science and only has knowledge of programming in C language. In his summer holidays, he decides to use his skills and make some extra pocket money by setting up a shop in nearby fair (mela). 
+Ramesh is a college student persuing computer science and only has knowledge of programming in C language. In his summer holidays, he decides to use his skills and make some extra pocket money by setting up a kiosk at the upcoming college fest. 
 The rules of the game are as follows :-
 - the player will enter 6 numbers between 1-40.
 - the system chooses 6 numbers of its own between 1-40.
